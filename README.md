@@ -227,7 +227,7 @@ interface IOutputService {
 这里编辑器monoca的相关操作，比如编辑器报错，添加断点等等
 
 
-#### 
+#### explorerService
 
 ```ts
 
@@ -240,4 +240,12 @@ interface IExplorerService {
   clear(projectId: string): void;
   clears(projectIds: string): void;
 }
+```
+
+这个service是用来获取文件区域的相关信息，比如获取展开的文件夹，展开文件夹等操作。
+
+基本使用：
+
+```ts
+explorerService.expand(projectId, path);
 ```
