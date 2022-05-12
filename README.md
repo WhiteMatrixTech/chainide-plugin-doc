@@ -168,9 +168,36 @@ interface ICommandService {
 
 ```ts
 chainide.registerCommand({
-	name: 'test-command',
-	callback: () => {
-		// function will be excuted
-	}
+name: 'test-command',
+callback: () => {
+	// function will be excuted
+}
+})
+```
+
+#### consoleService
+
+```ts
+interface IConsoleService {
+  readonly onConsoleChange: Event<ConsoleAction>;
+
+  logs(): IConsole[];
+  addLog(type: ConsoleLevel, message: string, detail?: string): void;
+  clearLog(): void;
+}
+```
+
+使用该service可以向IDE的Console面板注入或者删除数据:
+
+![image](https://user-images.githubusercontent.com/8351437/168017742-6f721ad4-a07a-4a4c-a964-9400cfda24f6.png)
+
+基本使用如下：
+
+```ts
+// 添加log
+consoleServcie.addLog('INFO', message)
+// 监听log变化
+consoleService.onConsoleChange(() => {
+	// 做一些数据操作
 })
 ```
