@@ -201,3 +201,43 @@ consoleService.onConsoleChange(() => {
 	// 做一些数据操作
 })
 ```
+
+#### outputService
+
+```ts
+interface IOutputService {
+  getOutputRows(): IOutputLogRow[];
+  getTransactionHash(): string;
+  handleInfo(data: IOutputLogRow[]): void;
+  handleInfoSingle(msg: string, source?: LogSource): void;
+  handleWarn(data: IOutputLogRow[]): void;
+  handleWarnSingle(msg: string, source?: LogSource): void;
+  handleError(data: IOutputLogRow[]): void;
+  handleErrorSingle(msg: string, source?: LogSource): void;
+  clearOutput(source: LogSource): void;
+  onRowsDidChange: Event<OutputRowsChangeEvent>;
+  emitTransactionHash(hash: string): void;
+}
+```
+
+这个service与consoleService比较相似，实在output面板中输出信息，使用onRowsDidChange 检测信息变化，算是比较常用的一个service
+
+#### editorService
+
+这里编辑器monoca的相关操作，比如编辑器报错，添加断点等等
+
+
+#### 
+
+```ts
+
+interface IExplorerService {
+  getExpandedFolder(projectId: string): IExpandMap;
+  expand(projectId: string, path: string): void;
+  collapse(projectId: string, path: string): void;
+  toggleExpand(projectId: string, path: string): void;
+  syncExpandWithFs(projectId: string, indexes: string[]): void;
+  clear(projectId: string): void;
+  clears(projectIds: string): void;
+}
+```
