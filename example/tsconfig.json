@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "noImplicitAny": true,
+    "skipLibCheck": true,
+    "module": "commonjs",
+    "target": "es6",
+    "allowJs": true,
+    "jsx": "react",
+    "typeRoots": ["node_modules/@types"]
+  },
+  "include": ["./src/**/*.ts", "./src/**/*.tsx", "src/index.tsx"],
+  "exclude": [
+    ".git",
+    ".app-cache",
+    ".npm",
+    ".npm-tmp",
+    "node_modules",
+    "**/node_modules/*",
+    "template"
+  ]
+}
