@@ -147,10 +147,10 @@ interface IFileSystemService {
 
 ## 插件系统api
 
-<details>
-  <summary>commandService</summary>
-  ```
-  interface ICommandService {
+#### commandService
+
+```
+interface ICommandService {
   registerCommand(
     data: Omit<ICommand, 'id'> | Array<Omit<ICommand, 'id'>>
   ): ICommand[];
@@ -158,5 +158,19 @@ interface IFileSystemService {
   getCommandsBy(key: string): ICommand[];
   clear(): void;
 }
-  ```
-</details>
+```
+
+使用该service可以注册一个命令，在编辑器中使用快捷键 command + p 跳出命令面板，然后执行对应的命令
+
+![image](https://user-images.githubusercontent.com/8351437/168017244-d7bcc906-477c-4e74-a2f6-561ca1da9388.png)
+
+注册命令
+
+```ts
+chainide.registerCommand({
+	name: 'test-command',
+	callback: () => {
+		// function will be excuted
+	}
+})
+```
