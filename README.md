@@ -144,3 +144,6 @@ interface IFileSystemService {
   createFileString(uri: string, content: string): Promise<void>;
 }
 ```
+
+## 插件系统api
+
