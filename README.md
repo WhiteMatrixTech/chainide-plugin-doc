@@ -147,3 +147,16 @@ interface IFileSystemService {
 
 ## 插件系统api
 
+<details>
+  <summary>commandService</summary>
+  ```
+  interface ICommandService {
+  registerCommand(
+    data: Omit<ICommand, 'id'> | Array<Omit<ICommand, 'id'>>
+  ): ICommand[];
+  remove(id: string): ICommand[];
+  getCommandsBy(key: string): ICommand[];
+  clear(): void;
+}
+  ```
+</details>
