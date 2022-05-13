@@ -31,8 +31,8 @@ activate 是当插件激活的时候调用，其他的也很明确语义化，�
 
 ```
 src
-├── chainIDE.d.ts # 通用的chainide定义
-├── components # 需要渲染在ide主体中的组件，使用react
+├── chainIDE.d.ts # 通用的 chainide 定义
+├── components # 需要渲染在 ide 主体中的组件，使用 react
 │   ├── control.less
 │   └── control.tsx
 ├── extension.ts # 插件声明
@@ -60,7 +60,7 @@ src
 
 #### 插件在ide中如何被调用
 
-`packages/chainide/src/modules/extensions/services/manager.ts` 这里的代码会activate对应的插件或者加载内部插件，可以看到主要是通过 `this._extensionEmitter.fire 这块pub/sub` 来更新插件面板，具体细节不在赘述
+`packages/chainide/src/modules/extensions/services/manager.ts` 这里的代码会 activate 对应的插件或者加载内部插件，可以看到主要是通过 `this._extensionEmitter.fire 这块pub/sub` 来更新插件面板，具体细节不在赘述
 
 ```ts
 activate(pluginId: string) {
@@ -160,7 +160,7 @@ interface ICommandService {
 }
 ```
 
-使用该service可以注册一个命令，在编辑器中使用快捷键 command + p 跳出命令面板，然后执行对应的命令
+使用该 service 可以注册一个命令，在编辑器中使用快捷键 command + p 跳出命令面板，然后执行对应的命令
 
 ![image](https://user-images.githubusercontent.com/8351437/168017244-d7bcc906-477c-4e74-a2f6-561ca1da9388.png)
 
@@ -187,7 +187,7 @@ interface IConsoleService {
 }
 ```
 
-使用该service可以向IDE的Console面板注入或者删除数据:
+使用该 service 可以向IDE的 Console 面板注入或者删除数据:
 
 ![image](https://user-images.githubusercontent.com/8351437/168017742-6f721ad4-a07a-4a4c-a964-9400cfda24f6.png)
 
@@ -220,11 +220,11 @@ interface IOutputService {
 }
 ```
 
-这个service与consoleService比较相似，实在output面板中输出信息，使用onRowsDidChange 检测信息变化，算是比较常用的一个service
+这个 service 与 consoleService 比较相似，实在 output 面板中输出信息，使用 onRowsDidChange 检测信息变化，算是比较常用的一个service
 
 #### editorService
 
-这里编辑器monoca的相关操作，比如编辑器报错，添加断点等等
+这里编辑器 monoca 的相关操作，比如编辑器报错，添加断点等等
 
 
 #### explorerService
@@ -242,7 +242,7 @@ interface IExplorerService {
 }
 ```
 
-这个service是用来获取文件区域的相关信息，比如获取展开的文件夹，展开文件夹等操作。
+这个 service 是用来获取文件区域的相关信息，比如获取展开的文件夹，展开文件夹等操作。
 
 基本使用：
 
