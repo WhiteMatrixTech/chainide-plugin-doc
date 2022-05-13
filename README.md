@@ -99,7 +99,7 @@ activate(pluginId: string) {
 ```
 
 
-#### chainide提供的api
+#### chainide 提供的 api
 
 ```ts
 interface IChainIdeProxyImpl {
