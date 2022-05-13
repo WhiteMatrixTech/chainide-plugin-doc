@@ -58,7 +58,7 @@ src
         └── toUri.ts
 ```
 
-#### 插件在ide中如何被调用
+#### 插件在 ide 中如何被调用
 
 `packages/chainide/src/modules/extensions/services/manager.ts` 这里的代码会 activate 对应的插件或者加载内部插件，可以看到主要是通过 `this._extensionEmitter.fire 这块pub/sub` 来更新插件面板，具体细节不在赘述
 
