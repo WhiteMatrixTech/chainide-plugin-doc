@@ -1,18 +1,17 @@
-# 🚀 Welcome to your new awesome project!
+# 🚀 快速开始
 
-This project has been created using **webpack scaffold**, you can now run
+本项目使用webpack打包，你可以使用以下命令：
 
 ```
+// 编译插件
 npm run compile
 ```
 
-to bundle your application
 
 ```
+// 本地启动
 npm run start
 ```
-
-to start your application
 
 ### 插件项目结构
 src 目录下为主项目目录
