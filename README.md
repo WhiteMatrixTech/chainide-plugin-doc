@@ -187,7 +187,7 @@ interface IConsoleService {
 }
 ```
 
-使用该 service 可以向IDE的 Console 面板注入或者删除数据:
+使用该 service 可以向 IDE 的 Console 面板注入或者删除数据:
 
 ![image](https://user-images.githubusercontent.com/8351437/168017742-6f721ad4-a07a-4a4c-a964-9400cfda24f6.png)
 
