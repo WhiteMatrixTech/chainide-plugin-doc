@@ -145,7 +145,7 @@ interface IFileSystemService {
 }
 ```
 
-## 插件系统api
+## 插件系统 api
 
 #### commandService
 
@@ -220,7 +220,7 @@ interface IOutputService {
 }
 ```
 
-这个 service 与 consoleService 比较相似，实在 output 面板中输出信息，使用 onRowsDidChange 检测信息变化，算是比较常用的一个service
+这个 service 与 consoleService 比较相似，实在 output 面板中输出信息，使用 onRowsDidChange 检测信息变化，算是比较常用的一个 service
 
 #### editorService
 
