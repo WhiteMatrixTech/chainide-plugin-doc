@@ -17,7 +17,7 @@ npm run start
 src 目录下为主项目目录
 extension.ts 为插件入口文件，暴露三个属性
 - activate: 插件激活时，触发该函数，函数入参,
- - ctx: 插件内部上下午
+ - ctx: 插件内部上下文
  - Impl: 插件接口
 
 - deactivate: 插件注销时，触发该函数
